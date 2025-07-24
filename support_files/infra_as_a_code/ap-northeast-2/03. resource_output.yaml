@@ -146,7 +146,7 @@ Resources:
       RouteTableId: !Ref PublicRoutingTable
       SubnetId: !Ref PublicSubnet02
 
-  PrivateRoutingTable01:  #
+  PrivateRoutingTable01: #
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
@@ -181,21 +181,21 @@ Outputs:
 
   PublicSubnet01:
     Value: !Ref PublicSubnet01
-    Description: First Public Subnet Resource Id 
+    Description: First Public Subnet Resource Id
     Export:
       Name: !Sub "${AWS::StackName}-PublicSubnet01"
   PublicSubnet02:
     Value: !Ref PublicSubnet02
-    Description: Second Public Subnet Resource Id 
+    Description: Second Public Subnet Resource Id
     Export:
       Name: !Sub "${AWS::StackName}-PublicSubnet02"
   PrivateSubnet01:
     Value: !Ref PrivateSubnet01
-    Description: First Private Subnet Resource Id 
+    Description: First Private Subnet Resource Id
     Export:
       Name: !Sub "${AWS::StackName}-PrivateSubnet01"
   PrivateSubnet02:
     Value: !Ref PrivateSubnet02
-    Description: Second Private Subnet Resource Id 
+    Description: Second Private Subnet Resource Id
     Export:
       Name: !Sub "${AWS::StackName}-PrivateSubnet02"
